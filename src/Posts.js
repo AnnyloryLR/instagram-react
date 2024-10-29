@@ -1,77 +1,54 @@
 export default function Posts(){
+  let posts = [{image:"assets/img/meowed.svg", alternative:"meowed", text:"meowed", mainImg:"assets/img/gato-telefone.svg", altMain:"gato-telefone", likedImg:"assets/img/respondeai.svg",
+    user:"respondeai", count:101.523, altLiked:"respondeai" },
+    {image:"assets/img/barked.svg", alternative:"barked", text:"barked", mainImg:"assets/img/dog.svg", altMain:"dog", likedImg:"assets/img/adorable_animals.svg",
+      user:"adorable_animals", count:99.159, altLiked:"adorable_animals"},
+      {image:"assets/img/meowed.svg", alternative:"meowed", text:"meowed", mainImg:"assets/img/gato-telefone.svg", altMain:"gato-telefone", likedImg:"assets/img/respondeai.svg",
+        user:"respondeai", count:101.523, altLiked:"respondeai" }
+  ]
+  
     return(
       <div class="posts">
-        <div class="post">
-          <div class="topo">
-            <div class="usuario">
-              <img src="assets/img/meowed.svg" alt="meowed"/>
-              meowed
-            </div>
-            <div class="acoes">
-              <ion-icon name="ellipsis-horizontal"></ion-icon>
-            </div>
-          </div>
-
-          <div class="conteudo">
-            <img src="assets/img/gato-telefone.svg" alt="gato-telefone"/>
-          </div>
-
-          <div class="fundo">
-            <div class="acoes">
-              <div>
-                <ion-icon name="heart-outline"></ion-icon>
-                <ion-icon name="chatbubble-outline"></ion-icon>
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </div>
-              <div>
-                <ion-icon name="bookmark-outline"></ion-icon>
-              </div>
-            </div>
-
-            <div class="curtidas">
-              <img src="assets/img/respondeai.svg" alt="respondeai"/>
-              <div class="texto">
-                Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="post">
-          <div class="topo">
-            <div class="usuario">
-              <img src="assets/img/barked.svg" alt="barked"/>
-              barked
-            </div>
-            <div class="acoes">
-              <ion-icon name="ellipsis-horizontal"></ion-icon>
-            </div>
-          </div>
-
-          <div class="conteudo">
-            <img src="assets/img/dog.svg" alt="dog" />
-          </div>
-
-          <div class="fundo">
-            <div class="acoes">
-              <div>
-                <ion-icon name="heart-outline"></ion-icon>
-                <ion-icon name="chatbubble-outline"></ion-icon>
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </div>
-              <div>
-                <ion-icon name="bookmark-outline"></ion-icon>
-              </div>
-            </div>
-
-            <div class="curtidas">
-              <img src="assets/img/adorable_animals.svg" alt="adorable_animals"/>
-              <div class="texto">
-                Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
-              </div>
-            </div>
-          </div>
-        </div>
+        {posts.map((item,i) => <Post image={item.image} alternative={item.alternative} text={item.text} mainImg={item.mainImg} altMain={item.altMain} likedImg={item.likedImg} altLiked={item.altLiked} likedText={item.likedText} user={item.user} count={item.count}/>)}
       </div>
     )
+}
+
+
+function Post({image, alternative, text, mainImg, altMain, likedImg, altLiked, user, count}){
+  return(
+    <div class="post">
+            <div class="topo">
+              <div class="usuario">
+                <img src={image} alt={alternative}/>
+                {text}
+              </div>
+              <div class="acoes">
+                <ion-icon name="ellipsis-horizontal"></ion-icon>
+              </div>
+            </div>
+            <div class="conteudo">
+              <img src={mainImg} alt={altMain}/>
+            </div>
+            <div class="fundo">
+              <div class="acoes">
+                <div>
+                  <ion-icon name="heart-outline"></ion-icon>
+                  <ion-icon name="chatbubble-outline"></ion-icon>
+                  <ion-icon name="paper-plane-outline"></ion-icon>
+                </div>
+                <div>
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+              </div>
+              <div class="curtidas">
+                <img src={likedImg} alt={altLiked}/>
+                <div class="texto">
+                 Curtido por <strong>{user}</strong> e <strong>outras {count} pessoas</strong>`
+                </div>
+              </div>
+            </div>
+    </div>
+  )
+
 }
