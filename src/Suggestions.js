@@ -8,12 +8,12 @@ export default function Suggestions(){
   ]
   
   return(
-    <div class="sugestoes">
-        <div class="titulo">
+    <div className="sugestoes">
+        <div className="titulo">
             Sugestões para você
             <div>Ver tudo</div>
         </div>
-        {suggestions.map((s,i) => <Suggestion user={s.user} image={s.image} alt={s.alt} reason={s.reason}/>)}
+        {suggestions.map((s,i) => <Suggestion user={s.user} image={s.image} alt={s.alt} reason={s.reason} key={i}/>)}
     </div>
   )
     
@@ -21,15 +21,15 @@ export default function Suggestions(){
 
 function Suggestion({user, image, alt, reason}){
   return(
-    <div class="sugestao">
-     <div class="usuario">
+    <div className="sugestao">
+     <div className="usuario">
       <img src={image} alt={alt}/>
-      <div class="texto">
-        <div class="nome">{user}</div>
-        <div class="razao">{reason}</div>
+      <div className="texto">
+        <div className="nome">{user}</div>
+        <div className="razao">{reason}</div>
       </div>
      </div>
-     <div class="seguir">Seguir</div>
+     <div className="seguir">Seguir</div>
     </div>
   )
 }

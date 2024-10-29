@@ -8,8 +8,8 @@ export default function Posts(){
   ]
   
     return(
-      <div class="posts">
-        {posts.map((item,i) => <Post image={item.image} alternative={item.alternative} text={item.text} mainImg={item.mainImg} altMain={item.altMain} likedImg={item.likedImg} altLiked={item.altLiked} likedText={item.likedText} user={item.user} count={item.count}/>)}
+      <div className="posts">
+        {posts.map((item,i) => <Post image={item.image} alternative={item.alternative} text={item.text} mainImg={item.mainImg} altMain={item.altMain} likedImg={item.likedImg} altLiked={item.altLiked} likedText={item.likedText} user={item.user} count={item.count} key={i}/>)}
       </div>
     )
 }
@@ -17,21 +17,21 @@ export default function Posts(){
 
 function Post({image, alternative, text, mainImg, altMain, likedImg, altLiked, user, count}){
   return(
-    <div class="post">
-            <div class="topo">
-              <div class="usuario">
+    <div className="post">
+            <div className="topo">
+              <div className="usuario">
                 <img src={image} alt={alternative}/>
                 {text}
               </div>
-              <div class="acoes">
+              <div className="acoes">
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
               </div>
             </div>
-            <div class="conteudo">
+            <div className="conteudo">
               <img src={mainImg} alt={altMain}/>
             </div>
-            <div class="fundo">
-              <div class="acoes">
+            <div className="fundo">
+              <div className="acoes">
                 <div>
                   <ion-icon name="heart-outline"></ion-icon>
                   <ion-icon name="chatbubble-outline"></ion-icon>
@@ -41,9 +41,9 @@ function Post({image, alternative, text, mainImg, altMain, likedImg, altLiked, u
                   <ion-icon name="bookmark-outline"></ion-icon>
                 </div>
               </div>
-              <div class="curtidas">
+              <div className="curtidas">
                 <img src={likedImg} alt={altLiked}/>
-                <div class="texto">
+                <div className="texto">
                  Curtido por <strong>{user}</strong> e <strong>outras {count} pessoas</strong>`
                 </div>
               </div>
