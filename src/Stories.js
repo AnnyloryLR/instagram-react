@@ -1,12 +1,12 @@
 export default function Stories(){
   let stories = [{image:"assets/img/9gag.svg", alternative:"9gag" , text:"9gag"},
-    {image:"assets/img/meowed.svg", alternative:"meowed", text:"meowed"},
-    {image:"assets/img/barked.svg", alternative:"barked", text:"barked"},
-    {image:"assets/img/nathanwpylestrangeplanet.svg", alternative:"nathanwpylestrangeplanet", text:"nathanwpylestrangeplanet"},
-    {image:"assets/img/wawawicomics.svg", alternative:"wawawicomics", text:"wawawicomics"},
-    {image:"assets/img/respondeai.svg", alternative:"respondeai", text:"respondeai"},
-    {image:"assets/img/filomoderna.svg", alternative:"filomoderna", text:"filomoderna"},
-    {image:"assets/img/memeriagourmet.svg" ,alternative:"memeriagourmet", text:"memeriagourmet"}
+    {image:"assets/meowed.svg", alternative:"meowed", text:"meowed"},
+    {image:"assets/barked.svg", alternative:"barked", text:"barked"},
+    {image:"assets/nathanwpylestrangeplanet.svg", alternative:"nathanwpylestrangeplanet", text:"nathanwpylestrangeplanet"},
+    {image:"assets/wawawicomics.svg", alternative:"wawawicomics", text:"wawawicomics"},
+    {image:"assets/respondeai.svg", alternative:"respondeai", text:"respondeai"},
+    {image:"assets/filomoderna.svg", alternative:"filomoderna", text:"filomoderna"},
+    {image:"assets/memeriagourmet.svg" ,alternative:"memeriagourmet", text:"memeriagourmet"}
 
 ]
     return(

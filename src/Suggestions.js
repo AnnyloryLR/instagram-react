@@ -1,10 +1,10 @@
 export default function Suggestions(){
   let suggestions = [
-    {user:"bad.vibes.memes", image: "assets/img/bad.vibes.memes.svg", alt:"bad.vibes.memes.svg", reason:"Segue você"},
-    {user:"chibirdart", image: "assets/img/chibirdart.svg", alt:"chibirdart", reason:"Segue você"},
-    {user:"razoesparaacreditar", image: "assets/img/razoesparaacreditar.svg", alt:"razoesparaacreditar", reason:"Novo no Instagram"},
-    {user:"adorable_animals", image: "assets/img/adorable_animals.svg", alt:"adorable_animals", reason:"Segue você"},
-    {user:"smallcutecats", image: "assets/img/smallcutecats.svg", alt:"smallcutecats", reason:"Segue você"}
+    {user:"bad.vibes.memes", image: "assets/bad.vibes.memes.svg", alt:"bad.vibes.memes.svg", reason:"Segue você"},
+    {user:"chibirdart", image: "assets/chibirdart.svg", alt:"chibirdart", reason:"Segue você"},
+    {user:"razoesparaacreditar", image: "assets/razoesparaacreditar.svg", alt:"razoesparaacreditar", reason:"Novo no Instagram"},
+    {user:"adorable_animals", image: "assets/adorable_animals.svg", alt:"adorable_animals", reason:"Segue você"},
+    {user:"smallcutecats", image: "assets/smallcutecats.svg", alt:"smallcutecats", reason:"Segue você"}
   ]
   
   return(

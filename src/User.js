@@ -4,7 +4,7 @@ import React from "react";
 export default function User(){
   let initialName = "catanacomics";
   const [name, SetName] = React.useState(initialName);
-  let initialAvatar = "assets/img/catanacomics.svg";
+  let initialAvatar = "assets/catanacomics.svg";
   const [avatar,SetAvatar] = React.useState(initialAvatar);
 
   function ChangeName(){
