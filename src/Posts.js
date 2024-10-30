@@ -43,7 +43,9 @@ function Post({image, alternative, text, mainImg, altMain, likedImg, altLiked, u
   function LikeImg(){
     if(heart === initialHeart){
       SetHeart("heart");
-      SetClass("filled")
+      SetClass("filled");
+      let finalCount = initialCount+0.001
+      SetCount(finalCount.toFixed(3));
     }
   }
 
