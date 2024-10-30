@@ -1,11 +1,11 @@
 import React from 'react';
 
 export default function Posts(){
-  let posts = [{image:"assets/meowed.svg", alternative:"meowed", text:"meowed", mainImg:"assets/img/gato-telefone.svg", altMain:"gato-telefone", likedImg:"assets/img/respondeai.svg",
+  let posts = [{image:"assets/meowed.svg", alternative:"meowed", text:"meowed", mainImg:"assets/gato-telefone.svg", altMain:"gato-telefone", likedImg:"assets/respondeai.svg",
     user:"respondeai", count:101.523, altLiked:"respondeai" },
-    {image:"assets/barked.svg", alternative:"barked", text:"barked", mainImg:"assets/img/dog.svg", altMain:"dog", likedImg:"assets/img/adorable_animals.svg",
+    {image:"assets/barked.svg", alternative:"barked", text:"barked", mainImg:"assets/dog.svg", altMain:"dog", likedImg:"assets/adorable_animals.svg",
     user:"adorable_animals", count:99.159, altLiked:"adorable_animals"},
-    {image:"assets/meowed.svg", alternative:"meowed", text:"meowed", mainImg:"assets/img/gato-telefone.svg", altMain:"gato-telefone", likedImg:"assets/img/respondeai.svg",
+    {image:"assets/meowed.svg", alternative:"meowed", text:"meowed", mainImg:"assets/gato-telefone.svg", altMain:"gato-telefone", likedImg:"assets/respondeai.svg",
     user:"respondeai", count:101.523, altLiked:"respondeai" }
   ]
   
