@@ -4,9 +4,9 @@ export default function Posts(){
   let posts = [{image:"assets/img/meowed.svg", alternative:"meowed", text:"meowed", mainImg:"assets/img/gato-telefone.svg", altMain:"gato-telefone", likedImg:"assets/img/respondeai.svg",
     user:"respondeai", count:101.523, altLiked:"respondeai" },
     {image:"assets/img/barked.svg", alternative:"barked", text:"barked", mainImg:"assets/img/dog.svg", altMain:"dog", likedImg:"assets/img/adorable_animals.svg",
-      user:"adorable_animals", count:99.159, altLiked:"adorable_animals"},
-      {image:"assets/img/meowed.svg", alternative:"meowed", text:"meowed", mainImg:"assets/img/gato-telefone.svg", altMain:"gato-telefone", likedImg:"assets/img/respondeai.svg",
-        user:"respondeai", count:101.523, altLiked:"respondeai" }
+    user:"adorable_animals", count:99.159, altLiked:"adorable_animals"},
+    {image:"assets/img/meowed.svg", alternative:"meowed", text:"meowed", mainImg:"assets/img/gato-telefone.svg", altMain:"gato-telefone", likedImg:"assets/img/respondeai.svg",
+    user:"respondeai", count:101.523, altLiked:"respondeai" }
   ]
   
     return(
