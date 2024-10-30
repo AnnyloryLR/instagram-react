@@ -189,6 +189,11 @@
   
   .post .fundo .acoes div:first-child ion-icon {
     margin-right: 6px;
+    
+  }
+
+  .filled{
+    color: red;
   }
   
   .post .fundo .curtidas {
@@ -206,6 +211,7 @@
   
   .post:last-child {
     margin-bottom: 18px;
+   
   }
   
   .sidebar {

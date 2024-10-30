@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Posts(){
   let posts = [{image:"assets/img/meowed.svg", alternative:"meowed", text:"meowed", mainImg:"assets/img/gato-telefone.svg", altMain:"gato-telefone", likedImg:"assets/img/respondeai.svg",
     user:"respondeai", count:101.523, altLiked:"respondeai" },
@@ -16,6 +18,44 @@ export default function Posts(){
 
 
 function Post({image, alternative, text, mainImg, altMain, likedImg, altLiked, user, count}){
+  let initialHeart = "heart-outline";
+  const [heart,SetHeart] = React.useState(initialHeart)
+  let initialClass = "";
+  const [classHeart, SetClass] = React.useState(initialClass)
+  let initialBookmark = "bookmark-outline";
+  const [bookmark, SetBookmark] = React.useState(initialBookmark)
+  let initialCount = count;
+  const [realCount, SetCount] = React.useState(initialCount)
+
+
+  function Like(){
+    if(heart === initialHeart){
+      SetHeart("heart");
+      SetClass("filled")
+      let finalCount = initialCount+0.001
+      SetCount(finalCount.toFixed(3));
+    } else{
+      SetHeart(initialHeart);
+      SetClass(initialClass);
+      SetCount(initialCount);
+    }
+  }
+  function LikeImg(){
+    if(heart === initialHeart){
+      SetHeart("heart");
+      SetClass("filled")
+    }
+  }
+
+  function SavePost(){
+    if(bookmark === initialBookmark){
+      SetBookmark("bookmark")
+    } else {
+      SetBookmark(initialBookmark)
+    }
+  }
+
+
   return(
     <div className="post">
             <div className="topo">
@@ -28,23 +68,23 @@ function Post({image, alternative, text, mainImg, altMain, likedImg, altLiked, u
               </div>
             </div>
             <div className="conteudo">
-              <img src={mainImg} alt={altMain}/>
+              <img onClick={LikeImg} src={mainImg} alt={altMain}/>
             </div>
             <div className="fundo">
               <div className="acoes">
                 <div>
-                  <ion-icon name="heart-outline"></ion-icon>
+                  <ion-icon onClick={Like} class={classHeart} name={heart}></ion-icon>
                   <ion-icon name="chatbubble-outline"></ion-icon>
                   <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
                 <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon onClick={SavePost} name={bookmark} ></ion-icon>
                 </div>
               </div>
               <div className="curtidas">
                 <img src={likedImg} alt={altLiked}/>
                 <div className="texto">
-                 Curtido por <strong>{user}</strong> e <strong>outras {count} pessoas</strong>`
+                 Curtido por <strong>{user}</strong> e <strong>outras {realCount} pessoas</strong>
                 </div>
               </div>
             </div>
