@@ -1,5 +1,5 @@
 export default function Stories(){
-  let stories = [{image:"assets/img/9gag.svg", alternative:"9gag" , text:"9gag"},
+  let stories = [{image:"assets/9gag.svg", alternative:"9gag" , text:"9gag"},
     {image:"assets/meowed.svg", alternative:"meowed", text:"meowed"},
     {image:"assets/barked.svg", alternative:"barked", text:"barked"},
     {image:"assets/nathanwpylestrangeplanet.svg", alternative:"nathanwpylestrangeplanet", text:"nathanwpylestrangeplanet"},
