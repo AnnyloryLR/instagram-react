@@ -1,3 +1,5 @@
+import Suggestion from "./Suggestion";
+
 export default function Suggestions(){
   let suggestions = [
     {user:"bad.vibes.memes", image: "assets/bad.vibes.memes.svg", alt:"bad.vibes.memes.svg", reason:"Segue você"},
@@ -19,17 +21,3 @@ export default function Suggestions(){
     
 }
 
-function Suggestion({user, image, alt, reason}){
-  return(
-    <div className="sugestao">
-     <div className="usuario">
-      <img src={image} alt={alt}/>
-      <div className="texto">
-        <div className="nome">{user}</div>
-        <div className="razao">{reason}</div>
-      </div>
-     </div>
-     <div className="seguir">Seguir</div>
-    </div>
-  )
-}

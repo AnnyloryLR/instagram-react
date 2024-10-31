@@ -1,3 +1,5 @@
+import Story from './Story'
+
 export default function Stories(){
   let stories = [{image:"assets/9gag.svg", alternative:"9gag" , text:"9gag"},
     {image:"assets/meowed.svg", alternative:"meowed", text:"meowed"},
@@ -20,21 +22,6 @@ export default function Stories(){
 }
 
 
-function Story({image, alternative, text}){
-  return(
-    <div className="story">
-      <div className="imagem">
-        <img src={image} alt={alternative}/>
-      </div>
-      <div className="usuario">
-         {text}
-      </div>
-    </div>
-
-
-  )
-
-}
 
 
 
